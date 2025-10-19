@@ -48,9 +48,13 @@ body {
 
 .container-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: linear-gradient(to left, #BCDAD0, #C8E6EE);
   padding: 16vh;
+}
+
+.p-header {
+  margin: 0 200px;
 }
 
 .paragrafo-header h2 {
