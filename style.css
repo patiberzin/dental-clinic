@@ -49,7 +49,7 @@ body {
 .container-header {
   display: flex;
   justify-content: space-around;
-  background-color: linear-gradient(135deg, #BCDAD0, #C8E6EE);
+  background-color: linear-gradient(to left, #BCDAD0, #C8E6EE);
   padding: 16vh;
 }
 
