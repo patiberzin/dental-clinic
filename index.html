@@ -1,120 +1,176 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dental Clinic</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-marca">
-    <h1>Dental Clinic</h1>
-  </div>
 
-  <header class="container-header">
-    <div class="paragrafo-header">
-      <div class="p-header">
-      <h2>Cuidando da sua família em todos os momentos</h2>
-      <p>Especialistas em sorrisos lindos e saudáveis</p>
-      
-      <a href="#" class="btn">Agendar avaliação gratuita</a>
-      </div>
-      
-    </div>
-    <div>
-      <img src="foto-familia.png" alt="familia">
-    </div>
-  </header>
-
-  <section>
-    <h2>Tenha os melhores tratamentos</h2>
-    <h3>Soluções modernas e completas para transformar o seu sorriso com segurança</h3>
-    <ul>
-      <li>
-        <img src="" alt="">
-        <div>
-          <p>Clareamento</p>
+    <!-- Header - Top Banner -->
+    <header class="top-banner">
+        <div class="container">
+            <p>Dental Clinic</p>
         </div>
-      </li>
-           <li>
-        <img src="" alt="">
-        <div>
-          <p>Lentes de contato dentais</p>
-        </div>
-      </li>
-           <li>
-        <img src="" alt="">
-        <div>
-          <p>Implantes dentários</p>
-        </div>
-      </li>
-          <li>
-        <img src="" alt="">
-        <div>
-          <p>Aparelhos ortodônticos</p>
-        </div>
-      </li>
-           <li>
-        <img src="" alt="">
-        <div>
-          <p>Limpeza e restauração</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+    </header>
 
-  <section>
-    <h2>Saiba a opinião de quem sorri com a gente</h2>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Cuidando da sua família em todos os momentos</h1>
+                <p>Especialistas em sorriso e saúde dos seus dentes</p>
+                <a href="#" class="btn primary-btn">Agendar avaliação gratuita</a>
+            </div>
+            <div class="hero-image">
+                <img src="foto-care.jpg" alt="Dentista atendendo menina">
+            </div>
+        </div>
+    </section>
 
-    <div class="container-cards">
-      <div class="card">
-      <img src="foto-jana.jpg" alt="foto">
-      <p>Janaina do Vale</p>
-      <p>Paciente há 3 anos</p>
-      <p>É muito bom saber que posso contar com os especialistas da Dental Clinic. A Dra. Roseli sempre me atende super bem, um amor! E ainda deixa meus dentes lindos.</p>
-<div class="rating">
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-</div>
-    </div>
-       <div class="card">
-      <img src="foto-vin.jpg" alt="foto">
-      <p>Vinicius Souzae</p>
-      <p>Paciente há 10 anos</p>
-      <p>Estou feliz com minha escolha certeira! A Dental Clinic cuida da minha família há anos. Sempre que precisamos podemos contar com os especialistas.</p>
-      <div class="rating">
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-</div>
-    </div>
-       <div class="card">
-      <img src="foto-jana.jpg" alt="foto">
-      <p>Janaina do Vale</p>
-      <p>Paciente há 1 ano</p>
-      <p>Eu precisei da Dental Clinic quando meus dentes já não serviam mais. Eu sentia muitas dores ao mastigar e o Dr Rogério resolveu meu problema.</p>
-    </div>
-<div class="rating">
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-  <span class="star">★</span>
-</div>
+    <!-- Treatments Section -->
+    <section class="treatments-section">
+        <div class="container">
+            <h2>Tenha os melhores tratamentos</h2>
+            <p class="section-subtitle">Ajudamos nossos clientes a sorrir, transformar seu sorriso com segurança.</p>
 
-  </div>
-    
-  </section>
+            <div class="treatments-carousel">
+                <div class="treatment-item">
+                    <img src="img-clareamento.jpg" alt="Clareamento Dental">
+                    <p>Clareamento</p>
+                </div>
+                <div class="treatment-item">
+                    <img src="img-lentes.jpg" alt="Lentes de Contato Dentais">
+                    <p>Lentes de contato dentais</p>
+                </div>
+                <div class="treatment-item">
+                    <img src="img-implantes.jpg" alt="Implantes Dentários">
+                    <p>Implantes dentários</p>
+                </div>
+                <div class="treatment-item">
+                    <img src="img-aparelho.jpg" alt="Aparelhos Ortodônticos">
+                    <p>Aparelhos</p>
+                </div>
+                 <div class="treatment-item">
+                    <img src="img-limpeza.jpg" alt="Limpeza">
+                    <p>Limpeza e Restauração</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Saiba a opinião de quem sorri com a gente</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="foto-jana.jpg" alt="Foto de Janaína do Valle">
+                        <h3>Janaína do Valle</h3>
+                        <p>Paciente há 3 anos</p>
+                    </div>
+                    <p class="testimonial-text">É muito bom saber que posso contar com os profissionais da Dental Clinic para cuidar do meu sorriso. E ainda deixa meus filhos fazerem o tratamento com dentistas.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="foto-vin.jpg" alt="Foto de Vinícius Souza">
+                        <h3>Vinicius Souza</h3>
+                        <p>Paciente há 10 anos</p>
+                    </div>
+                    <p class="testimonial-text">Estou feliz com minha escolha pela Dental Clinic! Tenho confiança e tranquilidade. Sempre que precisamos somos bem atendidos.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="foto-jurandir.jpg" alt="Foto de Jurandir Alceu">
+                        <h3>Jurandir Alceu</h3>
+                        <p>Paciente há 1 ano</p>
+                    </div>
+                    <p class="testimonial-text">Eu preciso da Dental Clinic para resolver os problemas de cáries e outras. Mas muitas delas só o Doutor Rogério resolveu meu problema.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Smiles Section (Sorrisos que encantam) -->
+    <section class="more-smiles-section">
+        <div class="container">
+            <h2>Sorrisos que encantam</h2>
+            <div class="smiles-grid">
+                <div class="smile-item">
+                    <img src="img-depois1.jpg" alt="Foto de antes e depois de limpeza e lentes">
+                    <p>Limpeza e lentes de contato</p>
+                </div>
+                <div class="smile-item">
+                    <img src="img-depois2.jpg" alt="Foto de antes e depois de prótese dental móvel">
+                    <p>Prótese dental móvel</p>
+                </div>
+                <div class="smile-item">
+                    <img src="img-depois3.jpg" alt="Foto de antes e depois de clareamento">
+                    <p>Clareamento</p>
+                </div>
+            </div>
+            <a href="#" class="btn primary-btn">Agendar avaliação gratuita</a>
+        </div>
+    </section>
+
+    <!-- About Section (Clínica feita para cuidar de você) -->
+    <section class="about-section">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="img-clinica.jpg" alt="Dra. com paciente">
+            </div>
+            <div class="about-content">
+                <h2>Uma clínica feita para cuidar de você</h2>
+                <p>Estamos há 20 anos ajudando pessoas a cuidarem de si com carinho e confiança.</p>
+                <p>Nosso espaço é aconchegante, conta com equipamentos de ponta e um atendimento que faz você se sentir à vontade do início ao fim.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Marque sua avaliação) -->
+    <section class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Marque sua avaliação gratuita</h2>
+                <p>Se beneficiar de um dia a dia diferente. Por isso, somos os melhores profissionais da região.</p>
+                <p><strong>Horário de atendimento:</strong> das 8h às 20h</p>
+                <p><strong>Local:</strong> Rua dos Alfeneiros, 32 - Lapa, SP</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="procedure">Procedimento:</label>
+                        <input type="text" id="procedure" name="procedure" placeholder="Ex: Clareamento, Implante">
+                    </div>
+                    <button type="submit" class="btn primary-btn">Agendar avaliação gratuita</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Desenvolvido por Percursos Digitais - 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

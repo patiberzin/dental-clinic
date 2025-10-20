@@ -1,69 +1,533 @@
-/*GERAL*/
+/* Variáveis de Cores */
+:root {
+    --primary-blue: #0A66C2; /* Azul principal dos botões e detalhes */
+    --secondary-blue: #D0E3F3; /* Azul claro do fundo da seção Hero */
+    --dark-blue: #033D72; /* Azul mais escuro para títulos e textos importantes */
+    --light-grey: #F0F2F5; /* Cinza claro para fundos de seções */
+    --text-dark: #333; /* Cor padrão para textos escuros */
+    --text-light: #666; /* Cor para textos secundários */
+    --white: #fff; /* Branco para fundos e textos */
+    --gold: #FFD700; /* Dourado para as estrelas dos depoimentos */
+}
 
+/* Reset Básico e Fontes */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: #FAF9F5;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
 }
 
-  .star {
-    color: gold;       /* cor da estrela */
-    font-size: 2rem;   /* tamanho da estrela */
-    margin-right: 4px; /* espaçamento entre estrelas */
-  }
+/* Container para centralizar o conteúdo */
+.container {
+    font-weight: bold;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+.container p {
+  font-size: 1.5rem;
+}
+
+/* Botões Genéricos */
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #066c95;
-  color: #fff;
-  padding: 20px 40px;
-  border-radius: 5px;
-  margin-top: 24px;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none; /* Garante que botões não tenham borda padrão */
+    cursor: pointer;
+    font-size: 1em;
 }
 
-/*MENU*/
-
-.bg-marca {
-  display: flex;
-  justify-content: center;
-  background-color: #6DB6C9;
-  padding: 2%;
+.btn:hover {
+    transform: translateY(-2px);
 }
 
-.bg-marca h1 {
-  color: #fff;
-  font-weight: bold;
+.primary-btn {
+    background-color: var(--primary-blue);
+    color: var(--white);
 }
 
-/*HEADER*/
-
-.container-header {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: linear-gradient(to left, #BCDAD0, #C8E6EE);
-  padding: 16vh;
+.primary-btn:hover {
+    background-color: var(--dark-blue);
 }
 
-.p-header {
-  margin: 0 200px;
+/* Header - Top Banner */
+.top-banner {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 300;
 }
 
-.paragrafo-header h2 {
-  font-size: 2rem;
-  margin: 0 20px;
+/* Hero Section */
+.hero-section {
+    background-color: var(--secondary-blue);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden; /* Para garantir que elementos que saiam do container não apareçam */
 }
 
-.paragrafo-header p {
-  font-size: 1.25rem;
-  margin: 16px 20px;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    gap: 40px; /* Espaçamento entre o conteúdo e a imagem */
 }
 
+.hero-content {
+    flex: 1;
+    min-width: 300px; /* Garante que não fique muito pequeno */
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    color: var(--dark-blue);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.15em;
+    margin-bottom: 25px;
+    color: var(--text-light);
+    max-width: 500px; /* Limita a largura do parágrafo */
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: right; /* Alinha a imagem à direita */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Seções de Título Comum */
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.1em;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Treatments Section */
+.treatments-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.treatments-carousel {
+    display: flex;
+    overflow-x: scroll; /* Habilita a rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Para um scroll mais suave e que "encaixa" */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos iOS */
+    padding-bottom: 20px; /* Espaço para a barra de rolagem */
+    gap: 30px; /* Espaçamento entre os itens */
+    padding-left: 20px; /* Para que o primeiro item não comece colado à borda */
+    padding-right: 20px; /* Para o último item */
+    margin-left: -20px; /* Ajusta o container para que o padding acima funcione bem */
+    margin-right: -20px; /* Ajusta o container */
+}
+
+/* Estilo da barra de rolagem (WebKit - Chrome, Safari) */
+.treatments-carousel::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+}
+
+.treatments-carousel::-webkit-scrollbar-track {
+    background: var(--light-grey); /* Fundo da barra */
+    border-radius: 10px;
+}
+
+.treatments-carousel::-webkit-scrollbar-thumb {
+    background: var(--primary-blue); /* Cor do "pegador" da barra */
+    border-radius: 10px;
+}
+
+.treatment-item {
+    flex: 0 0 auto; /* Não cresce, não encolhe, largura definida pelo conteúdo */
+    width: 280px; /* Largura fixa para cada item */
+    scroll-snap-align: start; /* O item se encaixa no início da área visível */
+    text-align: center;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.treatment-item:hover {
+    transform: translateY(-5px); /* Efeito de levantar no hover */
+}
+
+.treatment-item img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens dos tratamentos */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    display: block;
+}
+
+.treatment-item p {
+    padding: 15px;
+    font-weight: 500;
+    color: var(--dark-blue);
+    font-size: 1.1em;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--light-grey);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
+    gap: 30px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o rodapé das estrelas para baixo */
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid var(--primary-blue); /* Borda ao redor da imagem */
+}
+
+.testimonial-header h3 {
+    font-size: 1.3em;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+.testimonial-header p {
+    font-size: 0.9em;
+    color: var(--text-light);
+    margin-left: 10px;
+}
+
+.testimonial-text {
+    font-size: 0.5em;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+}
+
+.stars {
+    color: var(--gold); /* Cor das estrelas */
+    font-size: 1.2em;
+    letter-spacing: 2px; /* Espaçamento entre as estrelas */
+}
+
+/* More Smiles Section */
+.more-smiles-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.smiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.smile-item {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.smile-item:hover {
+    transform: translateY(-5px);
+}
+
+.smile-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.smile-item p {
+    padding: 15px;
+    font-weight: 500;
+    color: var(--dark-blue);
+    font-size: 1.1em;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--secondary-blue);
+    padding: 80px 0;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.about-content h2 {
+    text-align: left; /* Sobrescreve o alinhamento central padrão */
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+}
+
+.about-content p {
+    font-size: 1.05em;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: var(--secondary-blue); /* Fundo azul claro para a seção de contato */
+    border-radius: 8px;
+    padding: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    text-align: left;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+}
+
+.contact-info p {
+    font-size: 1.05em;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.contact-info p strong {
+    color: var(--dark-blue);
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--white); /* Fundo branco para o formulário */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--dark-blue);
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.2); /* Sombra suave no focus */
+}
+
+.contact-form .btn {
+    width: 100%; /* Botão ocupa a largura total do formulário */
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .hero-container,
+    .about-container,
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .about-content,
+    .contact-info {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .hero-content h1,
+    .about-content h2,
+    .contact-info h2 {
+        text-align: center;
+    }
+
+    .hero-image,
+    .about-image {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .hero-image img,
+    .about-image img {
+        max-width: 80%; /* Ajusta o tamanho da imagem em telas menores */
+    }
+
+    .testimonials-grid,
+    .smiles-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .contact-container {
+        padding: 30px; /* Reduz o padding interno do container de contato */
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+
+    .testimonials-grid,
+    .smiles-grid {
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .treatments-carousel {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .treatment-item {
+        width: 250px; /* Reduz ligeiramente a largura dos itens do carrossel */
+    }
